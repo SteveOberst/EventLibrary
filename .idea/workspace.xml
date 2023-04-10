@@ -4,56 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d236dac1-0754-42da-91f6-a2e9f1ad2c7a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Docs/Creating a listener.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Docs/Creating anonymous listeners.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Docs/Custom events.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Docs/Dispatching events.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Docs/Handler priorities explained.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/AEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/IEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/annotation/EventPriority.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/annotation/Prioritized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/result/ErrorReport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/result/IEventResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/result/IListenerExecutionResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/net/sxlver/eventlibrary/common/Reflect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/net/sxlver/eventlibrary/common/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/net/sxlver/eventlibrary/common/annotation/EventSubscriber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/net/sxlver/eventlibrary/common/exception/EventException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/net/sxlver/eventlibrary/common/exception/HandlerInstantiationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/src/main/java/net/sxlver/eventlibrary/common/exception/HandlerInvocationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/EventLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/HandlerList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/result/EventResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/result/ListenerExecutionResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/net/sxlver/eventlibrary/core/test/ContinueEventTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/net/sxlver/eventlibrary/core/test/EventCancelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/net/sxlver/eventlibrary/core/test/HandlerPriorityTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/net/sxlver/eventlibrary/core/test/HandlerWeightTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/src/test/java/net/sxlver/eventlibrary/core/test/IgnoreCancelledTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/src/main/java/net/sxlver/examples/CustomEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/src/main/java/net/sxlver/examples/EventDispatcher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/src/main/java/net/sxlver/examples/EventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/examples/src/main/java/net/sxlver/examples/ListenerRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="d236dac1-0754-42da-91f6-a2e9f1ad2c7a" name="Changes" comment="initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,6 +193,14 @@
       <option name="presentableId" value="Default" />
       <updated>1680959803970</updated>
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1681137777501</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681137777501</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -254,5 +213,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>
