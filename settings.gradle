@@ -1,0 +1,3 @@
+rootProject.name = 'EventLibrary'
+include 'core', 'api', 'common', 'examples'
+

@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'com.palantir.git-version' version '0.12.1'
+    id "com.github.johnrengelman.shadow" version "7.1.0"
+}
+
+group = 'net.sxlver'
+version = 'v0.1-alpha'
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    group = parent.group
+    version = parent.version
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url('https://jitpack.io') }
+        mavenLocal()
+    }
+
+    dependencies {
+        compileOnly 'org.jetbrains:annotations:22.0.0'
+
+        // guava
+        implementation 'com.google.guava:guava:11.0.2'
+
+        // Lombok
+        compileOnly 'org.projectlombok:lombok:1.18.22'
+        annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    }
+}

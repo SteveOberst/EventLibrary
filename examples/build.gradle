@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'net.sxlver'
+version 'v0.1-alpha'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project(':api')
+    implementation project(':common')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
