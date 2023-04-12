@@ -1,10 +1,14 @@
 package net.sxlver.eventlibrary.api.result;
 
 import net.sxlver.eventlibrary.api.AEvent;
+import net.sxlver.eventlibrary.common.exception.EventException;
+import net.sxlver.eventlibrary.common.exception.HandlerInvocationException;
 
-public class ErrorReport<A extends Throwable, B extends AEvent> {
+import java.io.PrintStream;
 
-    public static ErrorReport<Throwable, AEvent> EMPTY = new ErrorReport<>(new Throwable());
+public class ErrorReport<A extends Throwable, B extends AEvent<B>> {
+
+    public static ErrorReport<Throwable, ? extends AEvent> EMPTY = new ErrorReport<>(new Throwable());
 
     private final A error;
     private final String cause;
@@ -26,5 +30,9 @@ public class ErrorReport<A extends Throwable, B extends AEvent> {
 
     public StackTraceElement[] getStackTrace() {
         return stacktrace;
+    }
+
+    public void printStackTrace() {
+        new HandlerInvocationException(error).printStackTrace();
     }
 }

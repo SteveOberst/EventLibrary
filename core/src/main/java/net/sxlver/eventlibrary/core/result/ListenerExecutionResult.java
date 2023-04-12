@@ -16,7 +16,7 @@ public class ListenerExecutionResult<T extends AEvent<T>> implements IListenerEx
     private static final int ERROR    = 0x8;
 
     private final IEventHandler<T> handler;
-    private int flags;
+    private final int flags;
     private final ErrorReport<? extends EventException, T> error;
 
     ListenerExecutionResult(final IEventHandler<T> handler, final int flags) {

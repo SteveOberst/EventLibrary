@@ -19,6 +19,7 @@ import net.sxlver.eventlibrary.core.result.EventResult;
 
 import java.lang.reflect.Method;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -66,6 +67,10 @@ public final class HandlerList<T extends AEvent<T>> {
             if(result.shouldCancel()) cancelled = true;
             else if(result.shouldContinue()) cancelled = false;
 
+            if(result.error()) {
+                result.getError().printStackTrace();
+            }
+
             event.injectHandler(null);
             executionResults.add(result);
         }
@@ -77,7 +82,11 @@ public final class HandlerList<T extends AEvent<T>> {
         return new EventResult<>(event, executionResults);
     }
 
-    static <T extends AEvent<T>> IEventHandler<T> makeHandler(final Object listener, final Method method) {
+    IEventHandler<T> getHandler(final Method method) {
+        return handlers.values().stream().filter(handler -> handler.hashCode() == method.hashCode()).findFirst().orElse(null);
+    }
+
+    static <T extends AEvent<T>> IEventHandler<T> makeHandler(final Object instance, final Method method) {
         final Optional<Prioritized> annotationOp = Reflect.getMethodAnnotation(method, Prioritized.class);
         final EventSubscriber subscriberAnnotation = Reflect.getMethodAnnotation(method, EventSubscriber.class).orElseThrow(
                 () -> new HandlerInstantiationException("Missing " + EventSubscriber.class + " annotation on " + method.getName() + " in class " + method.getDeclaringClass())
@@ -85,9 +94,9 @@ public final class HandlerList<T extends AEvent<T>> {
 
         if (annotationOp.isPresent()) {
             final Prioritized annotation = annotationOp.get();
-            return new Handler<>(listener, (Class<T>)Reflect.getSubscriberTarget(method), method, annotation.priority(), annotation.weight(), subscriberAnnotation.ignoreCancelled());
+            return new Handler<>(instance, (Class<T>)Reflect.getSubscriberTarget(method), method, annotation.priority(), annotation.weight(), subscriberAnnotation.ignoreCancelled());
         }
-        return new Handler<>(listener, (Class<T>)Reflect.getSubscriberTarget(method), method, EventPriority.DEFAULT, 1, subscriberAnnotation.ignoreCancelled());
+        return new Handler<>(instance, (Class<T>)Reflect.getSubscriberTarget(method), method, EventPriority.DEFAULT, 1, subscriberAnnotation.ignoreCancelled());
     }
 
     static <T extends AEvent<T>> IEventHandler<T> makeAnonymousHandler(final @NonNull Function<T, IListenerExecutionResult<T>> handler,
@@ -214,8 +223,8 @@ public final class HandlerList<T extends AEvent<T>> {
 
         @Override
         public boolean equals(final Object obj) {
-            if (obj instanceof Integer)
-                return hash == (int) obj;
+            if (obj instanceof Number)
+                return hash == ((Number)obj).intValue();
             else if (!(obj instanceof HandlerList.HandlerKeyHash))
                 return false;
 

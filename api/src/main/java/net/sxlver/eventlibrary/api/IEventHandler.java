@@ -13,7 +13,7 @@ public interface IEventHandler<T extends AEvent<T>> {
     }
 
     default int getPriorityOrdinal() {
-        return EventPriority.DEFAULT.ordinal();
+        return getPriority().ordinal();
     }
 
     default int getWeight() {
