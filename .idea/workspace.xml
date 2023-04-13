@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d236dac1-0754-42da-91f6-a2e9f1ad2c7a" name="Changes" comment="Create license and readme">
+    <list default="true" id="d236dac1-0754-42da-91f6-a2e9f1ad2c7a" name="Changes" comment="Asynchronous event dispatching, other improvements">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/IEventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/IEventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/result/ErrorReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/result/ErrorReport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/EventLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/EventLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/HandlerList.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/HandlerList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/result/ListenerExecutionResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/net/sxlver/eventlibrary/core/result/ListenerExecutionResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/src/main/java/net/sxlver/examples/EventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/examples/src/main/java/net/sxlver/examples/EventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681137969369</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Asynchronous event dispatching, other improvements">
+      <created>1681311467454</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681311467454</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +238,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="Create license and readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create license and readme" />
+    <MESSAGE value="Asynchronous event dispatching, other improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Asynchronous event dispatching, other improvements" />
   </component>
 </project>

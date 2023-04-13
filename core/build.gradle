@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'net.sxlver'
+group 'net.sxlver.eventlibrary-core'
 version 'v0.1-alpha'
 
 repositories {
