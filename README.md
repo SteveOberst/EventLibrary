@@ -1,7 +1,7 @@
 # EventLibrary
 A bloat-free library for dispatching and receiving events
 
-# Description
+# Features
 
 **EventLibrary** contains the following features:
 
