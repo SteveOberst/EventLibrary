@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d236dac1-0754-42da-91f6-a2e9f1ad2c7a" name="Changes" comment="Asynchronous event dispatching, other improvements">
+    <list default="true" id="d236dac1-0754-42da-91f6-a2e9f1ad2c7a" name="Changes" comment="update README.md">
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docs/Custom events.md" beforeDir="false" afterPath="$PROJECT_DIR$/Docs/Custom events.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/AEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/net/sxlver/eventlibrary/api/AEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/core/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/examples/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +36,15 @@
         <task path="$PROJECT_DIR$/core">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/common">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/bundle">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -41,6 +55,24 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="EventLibrary" type="f1a62948:ProjectNode" />
+                <item name="api" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EventLibrary" type="f1a62948:ProjectNode" />
+                <item name="api" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EventLibrary" type="f1a62948:ProjectNode" />
+                <item name="api" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="EventLibrary" type="f1a62948:ProjectNode" />
                 <item name="core" type="2d1252cf:ModuleNode" />
               </path>
               <path>
@@ -54,7 +86,7 @@
                 <item name="EventLibrary" type="f1a62948:ProjectNode" />
                 <item name="core" type="2d1252cf:ModuleNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
+                <item name="publishing" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -97,8 +129,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.EventLibrary:core [test]">
-    <configuration name="EventLibrary:api [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.EventLibrary:bundle [jar]">
+    <configuration name="EventLibrary:api [publishAllPublicationsToGitHubPackagesRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/api" />
@@ -109,7 +141,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishToMavenLocal" />
+            <option value="publishAllPublicationsToGitHubPackagesRepository" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -119,10 +151,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EventLibrary:api [publish]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EventLibrary:bundle [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/bundle" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -130,7 +162,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publish" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -140,10 +172,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EventLibrary:api [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EventLibrary:common [publishAllPublicationsToGitHubPackagesRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/api" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -151,7 +183,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="publishAllPublicationsToGitHubPackagesRepository" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -161,7 +193,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="EventLibrary:core [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EventLibrary:core [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/core" />
@@ -172,7 +204,28 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="EventLibrary:core [publishAllPublicationsToGitHubPackagesRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/core" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishAllPublicationsToGitHubPackagesRepository" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -184,10 +237,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.EventLibrary:core [test]" />
-        <item itemvalue="Gradle.EventLibrary:api [test]" />
-        <item itemvalue="Gradle.EventLibrary:api [publish]" />
-        <item itemvalue="Gradle.EventLibrary:api [publishToMavenLocal]" />
+        <item itemvalue="Gradle.EventLibrary:bundle [jar]" />
+        <item itemvalue="Gradle.EventLibrary:common [publishAllPublicationsToGitHubPackagesRepository]" />
+        <item itemvalue="Gradle.EventLibrary:core [publishAllPublicationsToGitHubPackagesRepository]" />
+        <item itemvalue="Gradle.EventLibrary:api [publishAllPublicationsToGitHubPackagesRepository]" />
+        <item itemvalue="Gradle.EventLibrary:core [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -221,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681311467454</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update README.md">
+      <created>1681384188643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681384188643</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -239,6 +300,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="Create license and readme" />
     <MESSAGE value="Asynchronous event dispatching, other improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Asynchronous event dispatching, other improvements" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
 </project>

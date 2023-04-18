@@ -17,7 +17,7 @@ public abstract class AEvent<THIS extends AEvent<THIS>> {
     }
 
     /**
-     * Returns the {@code IEventHandler} representing the current execution scope.
+     * Returns the {@code IEventHandler} representing the current execution scope of the event.
      *
      * @return The Handler representing the current execution context
      */

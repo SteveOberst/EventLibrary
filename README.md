@@ -1,6 +1,26 @@
 # EventLibrary
-A bloat-free library for dispatching and receiving events
+A bloat-free library for dispatching and receiving events.
 
+# Dependencies
+
+### Gradle
+```groovy
+repositories {
+    maven {
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/SteveOberst/EventLibrary")
+        credentials {
+            username = project.findProperty("gpr.user") ?: System.getenv().get("GITHUB_USERNAME")
+            password = project.findProperty("gpr.key") ?: System.getenv().get("GITHUB_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    implementation group: "net.sxlver.eventlibrary", name: "core", version: "<latest>"
+}
+```
+![latest](https://img.shields.io/badge/latest-0.1.1--stable-blue)
 # Features
 
 **EventLibrary** contains the following features:

@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'net.sxlver'
-version 'v0.1-alpha'
+version '0.1'
 
 repositories {
     mavenCentral()

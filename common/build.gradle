@@ -1,9 +1,27 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
-group 'net.sxlver.eventlibrary-common'
-version 'v0.1-alpha'
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/SteveOberst/EventLibrary")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv().get("GITHUB_USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv().get("GITHUB_TOKEN")
+            }
+        }
+    }
+    publications {
+        gpr(MavenPublication) {
+            from(components.java)
+        }
+    }
+}
+group properties.get("package")
+version properties.get("commonVersion")
 
 repositories {
     mavenCentral()

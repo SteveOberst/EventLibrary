@@ -21,4 +21,4 @@ class User {
 }
 ```
 
-And that's it really. You can then dispatch the event by invoking``EventLibrary.dispatchEvent(new UserLoginEvent(user));``. 
+And that's it really. You can then dispatch the event by invoking ``EventLibrary.dispatchEvent(new UserLoginEvent(user));``. 
