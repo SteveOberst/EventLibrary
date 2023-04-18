@@ -1,6 +1,14 @@
 # EventLibrary
 A bloat-free library for dispatching and receiving events.
 
+# Features
+
+**EventLibrary** contains the following features:
+
+- dispatch events (synchronously and asynchronously)
+- register (anonymous) listeners for events
+- provide your custom implementations to process events however you want
+
 # Dependencies
 
 ### Gradle
@@ -21,13 +29,6 @@ dependencies {
 }
 ```
 ![latest](https://img.shields.io/badge/latest-0.1.1--stable-blue)
-# Features
-
-**EventLibrary** contains the following features:
-
-- dispatch events (synchronously and asynchronously)
-- register (anonymous) listeners for events
-- provide your custom implementations to process events however you want
 
 ## Initialization
 No need for initialization!
